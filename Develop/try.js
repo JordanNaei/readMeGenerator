@@ -30,7 +30,7 @@ const questions =
     },
     {
       type: "input",
-      message: "Provide contributors to the project, if any?",
+      message: "Provide contributors, seperated by comma, to the project, if any?",
       name: "contribute"
     },
     {
@@ -80,25 +80,9 @@ async function init() {
   }
 }
 
+
+
 init();
-
-// inquirer
-//   .prompt(questions).then(function (resp) {
-//     console.log(resp);
-//     return resp;
-//   }).then(function (resp) {
-//     var getIt = bs.generateMarkdown(resp);
-//     console.log(getIt);
-//     return getIt;
-//   }).then(function (getIt) {
-
-//     fs.writeFile("log.md", getIt, function (err) {
-//       if (err) {
-//         return console.log(err);
-//       }
-//       console.log("Success!");
-//     });
-//   })
 
 
 
