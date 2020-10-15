@@ -1,6 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-    var readMeCompleteBody =`  
+    var readMeCompleteBody =`
 # ${data.title}
     
 # Table of Contents

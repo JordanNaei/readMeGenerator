@@ -20,17 +20,17 @@ const questions =
 
         {
             type: "input",
-            message: "Provide instalation instructions for there is any? Please provide 'noInstructions' if no instructions is needed",
+            message: "Provide instalation instructions for there is any? provide 'noInstructions' if no instructions is needed",
             name: "install"
         },
         {
             type: "input",
-            message: "Provide a meaningful information descriping how this application is used?",
+            message: "Provide a meaningful information descriping how this application is best used?",
             name: "use"
         },
         {
             type: "input",
-            message: "Provide contributors to the project, if any?",
+            message: "Provide contributors, seperated by comma, to the project, if any?",
             name: "contribute"
         },
         {
@@ -60,30 +60,31 @@ const questions =
         },
         {
             type: "input",
-            message: "Provide the main email address to contact for more iformation about the project?",
+            message: "Provide the main email address to contact for more information about the project?",
             name: "email"
         }
     ];
 
-function init() {
-    inquirer
-        .prompt(questions).then(function (resp) {
-            console.log(resp);
-            return resp;
-            }).then(function (resp) {
-            var getIt = bs.generateMarkdown(resp);
-            console.log(getIt);
-            return getIt;
-                }).then(function (getIt) {
-                        fs.writeFile("log.md", getIt, function (err) {
-                            if (err) {
-                                return console.log(err);
-                            }
-                            console.log("Success!");
-                        });
-                    })
+function getUserInput() {
+    return inquirer.prompt(questions);
 }
 
+async function init() {
+    try {
+        const userResponse = await getUserInput();
+        const generatedReadMe = bs.generateMarkdown(userResponse);
+        await writeFileAsync("ReaMe.md", generatedReadMe);
+        console.log("success");
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+
+
 init();
+
+
+
 
 
