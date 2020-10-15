@@ -65,6 +65,7 @@ const questions =
         }
     ];
 
+
 function getUserInput() {
     return inquirer.prompt(questions);
 }

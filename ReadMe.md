@@ -51,6 +51,9 @@ none.
 
 2- Then to prompt the user run the main index.js on node.
 <img src="img/npm-i.PNG" alt= "this npm i initialization">
+
+3- Answering the prompt quesitons accurately should provide the expected result:
+<img src="img/npm-i.PNG" alt= "this npm i initialization">
     
 ## License:
     Please visit us at the following for more information with regrads the license.
