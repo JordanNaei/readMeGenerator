@@ -47,10 +47,10 @@ none.
     
 ## Tests:
 1- Start by loading the npm i dependencies list in the package.json file.
-<img src="images/npm-i.PNG" alt= "this npm i initialization">
+<img src="img/npm-i.PNG" alt= "this npm i initialization">
 
 2- Then to prompt the user run the main index.js on node.
-<img src="images/npm-i.PNG" alt= "this npm i initialization">
+<img src="img/npm-i.PNG" alt= "this npm i initialization">
     
 ## License:
     Please visit us at the following for more information with regrads the license.
