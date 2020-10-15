@@ -74,7 +74,7 @@ async function init() {
     try {
         const userResponse = await getUserInput();
         const generatedReadMe = bs.generateMarkdown(userResponse);
-        await writeFileAsync("ReaMe.md", generatedReadMe);
+        await writeFileAsync("TestReaMe.md", generatedReadMe);
         console.log("success");
     } catch (err) {
         console.log(err);
